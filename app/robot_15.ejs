@@ -1,0 +1,175 @@
+<% include layouts/head_start %>
+<% include layouts/common_style %>
+<!-- build:css styles/robot.css -->
+<link rel="stylesheet" href="styles/robot.css">
+<!-- endbuild -->
+<% include layouts/head_end %>
+
+<body>
+
+    <header>
+        <% include layouts/menu_start %>
+        <li class="pure-menu-item"><a href="robot_9_14.html" class="pure-menu-link">~14</a></li>
+        <li class="pure-menu-item"><a href="#" class="pure-menu-link">2015</a></li>
+        <li class="pure-menu-item"><a href="#1" class="pure-menu-link">１号機</a></li>
+        <li class="pure-menu-item"><a href="#2" class="pure-menu-link">２号機</a></li>
+        <li class="pure-menu-item"><a href="#3" class="pure-menu-link">３号機</a></li>
+        <li class="pure-menu-item"><a href="#4" class="pure-menu-link">４号機</a></li>
+        <% include layouts/menu_end %>
+    </header>
+    <div class="content-wrapper" id="content-wrapper">
+        <h1 class="content-head is-center"> 
+            <p>2015年度のロボット</p>
+            <p>テーマ「状況に適応した救助」</p>
+        </h1>
+        
+        <article id="1" class="content robot-article-single">
+            <h2 class="content-head is-center"> １号機　Uribo α</h2>
+            <div class="pure-g">
+                <div class="pure-u-2-5 custom-padding">
+                    <img src="images/robot/2015_1.jpg" width="100%">
+                </div>
+                <div class="pure-u-3-5 custom-padding">
+                    <p class="is-center">家に取り残された人々を救助</p>
+                    <ul>
+                        <li>
+                            メカナムホイール
+                            <p>機体の向きを変えずに8方向に移動することかでき、救助時の細かい位置調整を実現</p>
+                        </li>
+                        <li>
+                            跳ね橋機構
+                            <p>機体から家に橋をかけ、子機を屋内に送り込む</p>
+                        </li>
+                        <li>
+                            ティルト機構
+                            <p>機体側面の脚を地面につきだすことで家の傾きに対応</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pure-u-1 custom-margin is-center">
+                    <button class="pure-button cad-load-buttion">Cadを表示</button>
+                    <div id="viewer1" class="cad-viewer"></div>
+                </div>
+            </div>
+        </article>
+
+        <hr>
+
+        <article id="2" class="content robot-article-single">
+            <h2 class="content-head is-center"> ２号機　Uribo β</h2>
+            <div class="pure-g">
+                <div class="pure-u-2-5 custom-padding">
+                    <img src="images/robot/2015_2.jpg" width="100%">
+                </div>
+                <div class="pure-u-3-5 custom-padding">
+                    <p class="is-center">抱きかかえるように優しく救助</p>
+                    <ul>
+                        <li>
+                            2段だっこちゃんアーム
+                            <p>要救助者を脇の下から抱え上げるように救助することで、 路上のガレキで要救助者を傷つけることを防ぐ。
+                               また、ベッドの角度はセンサによって制御され、地面に対し水平を保つことで要救助者の負担を軽減。</p>
+                        </li>
+                        <li>
+                            可動バンパー
+                            <p>ガレキを左右、自由な方向に押しのけ道路を整備</p>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pure-u-1 custom-margin is-center">
+                    <button class="pure-button cad-load-buttion">Cadを表示</button>
+                    <div id="viewer2" class="cad-viewer"></div>
+
+                </div>
+            </div>
+        </article>
+
+        <hr>
+
+        <article id="3" class="content robot-article-single">
+            <h2 class="content-head is-center"> ３号機　Uribo γ</h2>
+            <div class="pure-g">
+                <div class="pure-u-2-5 custom-padding">
+                    <img src="images/robot/2015_3.jpg" width="100%">
+                </div>
+                <div class="pure-u-3-5 custom-padding">
+                    <p class="is-center">特異な救助機構</p>
+                    <ul>
+                        <li>
+                            しゃくとり型救助機構
+                            <p>
+                                細い棒を要救助者の脇の下に差し込み、内部の関節をしゃくとりむしのように折り曲げることで脇を下から支え、 要救助者を機体に引き込む。
+                                2014年度の指型機構の利点を残しつつ、製作効率、耐久性を改善。
+                            </p>
+                        </li>
+                        <li>
+                            高度カメラ
+                            <p>高所から現場を俯瞰し、状況の把握や救助の映像支援を行う</p>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pure-u-1 custom-margin is-center">
+                    <button class="pure-button cad-load-buttion">Cadを表示</button>
+                    <div id="viewer3" class="cad-viewer"></div>
+                </div>
+            </div>
+        </article>
+
+        <hr>
+
+        <article id="4" class="content robot-article-single">
+            <h2 class="content-head is-center"> ４号機　Uribo χ</h2>
+            <div class="pure-g">
+                <div class="pure-u-2-5 custom-padding">
+                    <img src="" width="100%">
+                </div>
+                <div class="pure-u-3-5 custom-padding">
+                    <p>
+                        準備中
+                    </p>                    
+                </div>
+            </div>
+        </article>
+        
+        <% include layouts/footer %>  
+        
+    </div>
+
+    <% include layouts/common_script %>
+    <!-- build:js scripts/main.js -->
+    <script type="text/javascript" src="scripts/main.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/three.js -->
+    <script src="/bower_components/three.js/build/three.js"></script>
+    <script src="/bower_components/three.js/examples/js/loaders/OBJLoader.js"></script>
+    <script src="/bower_components/three.js/examples/js/Detector.js"></script>
+    <script src="/bower_components/three.js/examples/js/controls/TrackballControls.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/robotcad.js -->
+    <script src="scripts/robotcad.js"></script>
+    <!-- endbuild -->
+    <script>
+        var cads = [];               
+        
+        $('.cad-load-buttion').click( function() {
+            console.log($(this).closest("article").get(0));
+            var id = $(this).closest("article").get(0).id;
+            var n = "viewer" + id;
+            $("#"+n).height(500);
+            console.log(n);
+            cads.push(new CadViewer(n, "images/robot/2015_" + id + ".obj"));
+            this.disabled = true;
+        });
+        
+        var animate = function() {
+            requestAnimationFrame(animate);
+            cads.forEach( function(cad) {
+               cad.animate(); 
+            });
+        };
+        animate();
+    </script>
+</body>
+
+</html>

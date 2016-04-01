@@ -1,0 +1,61 @@
+<% include layouts/head_start %>
+<% include layouts/common_style %>
+<!-- build:css styles/index.css -->
+<link rel="stylesheet" href="styles/index.css">
+<!-- endbuild -->
+<% include layouts/head_end %>
+
+<body>
+    <header>
+        <% include layouts/menu_start %>
+        <li class="pure-menu-item"><a href="#about" class="pure-menu-link">六甲おろしとは</a></li>
+        <li class="pure-menu-item"><a href="#robot" class="pure-menu-link">ロボット</a></li>
+        <li class="pure-menu-item"><a href="#history" class="pure-menu-link">歴史</a></li>
+        <li class="pure-menu-item"><a href="#contact" class="pure-menu-link">コンタクト</a></li>
+        <li class="pure-menu-item"><a href="#link" class="pure-menu-link">リンク</a></li>
+        <li class="pure-menu-item"><a href="<%= blog_url %>" class="pure-menu-link">ブログ</a></li>
+        <li class="pure-menu-item"><a href="<%= wiki_url %>" class="pure-menu-link">Wiki</a></li>                
+        <% include layouts/menu_end %>                                            
+    </header>
+
+    <div class="splash-container">
+        <div class="splash">
+            <div id="logo"></div>
+        </div>
+    </div>
+
+    <div class="content-wrapper" id="content-wrapper">
+        <% include top/_welcome %>
+        <hr>
+        <% include top/_about %>
+        <hr>
+        <% include top/_robot %>
+        <hr>
+        <% include top/_history %>
+        <hr>
+        <% include top/_contact %>
+        <hr>
+        <% include top/_link %>
+        
+        <% include layouts/footer %>        
+    </div>
+
+    <% include layouts/common_script %>
+    <!-- build:js scripts/main.js -->
+    <script type="text/javascript" src="scripts/main.js"></script>
+    <!-- endbuild -->
+    <script>
+        $(document).ready( function() {            
+            $("#logo").load("images/logo.svg svg").addClass("path");
+        });                       
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > $("#content-wrapper").position().top - $("#home-menu").height()) {
+                $("#home-menu").addClass("bgcolor-custom-blue");
+            } else {   
+                $("#home-menu").removeClass("bgcolor-custom-blue");                             
+            }
+        });
+    </script>
+</body>
+
+</html>
