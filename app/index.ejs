@@ -20,6 +20,7 @@
 
     <div class="splash-container">
         <div class="splash">
+            <!--[if IE]><p>このページはInternet Explorerをサポートしていません</p><![endif]-->
             <div id="logo"></div>
         </div>
     </div>
@@ -45,8 +46,12 @@
     <script type="text/javascript" src="scripts/main.js"></script>
     <!-- endbuild -->
     <script>
-        $(document).ready( function() {            
-            $("#logo").load("images/logo.svg svg").addClass("path");
+        $(document).ready( function() {     
+            if (Modernizr.svg) {       
+                $("#logo").load("images/logo.svg svg").addClass("path");
+            } else {
+                $("#logo").load("images/logo.png");
+            }
         });                       
         $(window).scroll(function () {
             if ($(window).scrollTop() > $("#content-wrapper").position().top - $("#home-menu").height()) {

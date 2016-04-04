@@ -58,7 +58,7 @@ const testLintOptions = {
   }
 };
 
-gulp.task('lint', lint('app/scripts/**/*.js', {
+gulp.task('lint', lint(['app/scripts/**/*.js','!app/scripts/modernizr-custom.min.js'], {
     extends: 'eslint:recommended',
     globals: {
             'THREE':false,
@@ -71,7 +71,7 @@ gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 gulp.task('html', ['views', 'styles', 'scripts'], () => {
     return gulp.src(['app/*.html', '.tmp/*.html'])
     .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
-    .pipe($.if('*.js', $.uglify()))
+    .pipe($.if('*.js', $.uglify({preserveComments: 'some'})))
     .pipe($.if('*.css', $.cssnano()))
     .pipe($.if('*.html', $.htmlmin({collapseWhitespace: true})))
     .pipe(gulp.dest('dist'));
