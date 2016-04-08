@@ -4,6 +4,9 @@ import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
 import del from 'del';
 import {stream as wiredep} from 'wiredep';
+import ftp from 'vinyl-ftp';
+import gutil from 'gulp-util';
+import fs from 'fs';
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -34,8 +37,7 @@ gulp.task('scripts', () => {
 });
 
 gulp.task('views', () => {
-  var fs = require('fs');
-  var json = JSON.parse(fs.readFileSync("./ejs_var.json"));
+  const json = JSON.parse(fs.readFileSync("./ejs_var.json"));
   return gulp.src(['app/**/*.ejs', "!app/**/_*.ejs"])
     .pipe($.plumber())
     .pipe($.ejs(json, {"ext": ".html"}))
@@ -184,4 +186,14 @@ gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
 
 gulp.task('default', ['clean'], () => {
   gulp.start('build');
+});
+
+gulp.task('deploy', () => {
+    var conf = JSON.parse(fs.readFileSync('./ftp-config.json'));
+    conf.log = console.log;
+    console.log(conf);
+    var connection = ftp.create(conf);
+    gulp.src( [ './dist/**'], { base: 'dist', buffer: false })
+	.pipe(connection.newer('/public_html'))
+	.pipe(connection.dest('/public_html'));
 });

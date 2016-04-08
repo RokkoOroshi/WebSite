@@ -40,5 +40,8 @@
         "single"
       ]
     }
+  },
+  "dependencies": {
+    "vinyl-ftp": "^0.4.5"
   }
 }
