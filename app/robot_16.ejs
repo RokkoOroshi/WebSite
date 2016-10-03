@@ -1,0 +1,184 @@
+<% include layouts/head_start %>
+<% include layouts/common_style %>
+<!-- build:css styles/robot.css -->
+<link rel="stylesheet" href="styles/robot.css">
+<!-- endbuild -->
+<% include layouts/head_end %>
+
+<body>
+
+    <header>
+        <% include layouts/menu_start %>
+        <li class="pure-menu-item"><a href="robot_15.html" class="pure-menu-link">~15</a></li>
+        <li class="pure-menu-item"><a href="#" class="pure-menu-link">2016</a></li>
+        <li class="pure-menu-item"><a href="#1" class="pure-menu-link">１号機</a></li>
+        <li class="pure-menu-item"><a href="#2" class="pure-menu-link">２号機</a></li>
+        <li class="pure-menu-item"><a href="#3" class="pure-menu-link">３号機</a></li>
+        <li class="pure-menu-item"><a href="#4" class="pure-menu-link">４号機</a></li>
+        <li class="pure-menu-item"><a href="#circuit" class="pure-menu-link">回路</a></li>
+        <li class="pure-menu-item"><a href="#system" class="pure-menu-link">システム</a></li>
+        <% include layouts/menu_end %>
+    </header>
+    <div class="content-wrapper" id="content-wrapper">
+        <h1 class="content-head is-center"> 
+            <p>2016年度のロボット</p>
+            <p>テーマ「はやい救助」</p>
+        </h1>
+        <article id="about" class="content robot-article-single">
+            <p>第16回レスキューロボットコンテストに参加し、二号機がベストロボット賞を受賞、メンバーがベストプレゼンテーション賞を受賞しました。</p>
+            
+        </article>
+        <article id="1" class="content robot-article-single">
+            <h2 class="content-head is-center"> １号機　Cube</h2>
+            <div class="pure-g">
+                <div class="pure-u-2-5 custom-padding">
+                    <img src="images/robot/2016_1.jpg" width="100%">
+                    <iframe width="100%" height="auto" src="https://www.youtube.com/embed/aJ_9oX6LrO4" frameborder="0" allowfullscreen></iframe>                   
+                </div>
+                <div class="pure-u-3-5 custom-padding">
+                </div>
+ 
+            </div>
+        </article>
+
+        <hr>
+
+        <article id="2" class="content robot-article-single">
+            <h2 class="content-head is-center"> ２号機　Rectangle</h2>
+            <div class="pure-g">
+                <div class="pure-u-2-5 custom-padding">
+                    <img src="images/robot/2016_2.jpg" width="100%">
+                    <iframe width="100%" height="auto" src="https://www.youtube.com/embed/FhN1-2ANT8M" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="pure-u-3-5 custom-padding">
+                </div>
+            </div>
+        </article>
+
+        <hr>
+
+        <article id="3" class="content robot-article-single">
+            <h2 class="content-head is-center"> ３号機　Prism</h2>
+            <div class="pure-g">
+                <div class="pure-u-2-5 custom-padding">
+                    <img src="images/robot/2016_3.jpg" width="100%">
+                    <iframe width="100%" height="auto" src="https://www.youtube.com/embed/T2UbUbyEWkg" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="pure-u-3-5 custom-padding">
+                </div>
+            </div>
+        </article>
+
+        <hr>
+
+        <article id="4" class="content robot-article-single">
+            <h2 class="content-head is-center"> ４号機　Dot</h2>
+            <div class="pure-g">
+                <div class="pure-u-2-5 custom-padding">
+                    <img src="images/robot/2016_4.jpg" width="100%">
+                </div>
+                <div class="pure-u-3-5 custom-padding">
+                </div>
+            </div>
+        </article>
+
+        <article id="circuit" class="content robot-article-single">
+            <h2 class="content-head is-center">回路</h2>
+            <div class="pure-g">
+                <div class="pure-u-2-5 custom-padding">
+                    <img src="images/robot/2016_circuit.jpg" width="100%">
+                </div>
+                <div class="pure-u-3-5 custom-padding">
+                    <p class="is-center">CAN接続の組み込み回路</p>
+                    <ul>
+                        <li>
+                            双方向通信
+                            <p>メインのLinuxボードとの通信はもちろん、各基板間でも双方向にデータをやり取りできます。</p>
+                        </li>
+                        <li>
+                            バス型ネットワーク
+                            <p>複数の回路をチェーンのように繋いでいくことができます。配線が削減でき、ロボットのメンテナンス性を改善できます。</p>
+                        </li>
+                        <li>
+                            Arduino互換
+                            <p>Arduino IDEを用いて開発ができます。初心者でも容易に使えることを目指しました。</p>
+                        </li>
+                        <li>
+                            プログラム
+                            <p>プログラム、及び基板データは<a href="https://github.com/RokkoOroshi">Github</a>で公開しています。
+                               (<a href="https://github.com/RokkoOroshi/CanMotorBoard2016">CanMotorBoard2016</a>,
+                                <a href="https://github.com/RokkoOroshi/CanServoBoard2016">CanServoBoard2016</a>)
+                            </p>
+                        </li>
+                    </ul>                    
+                </div>
+            </div>
+        </article>
+
+        <article id="system" class="content robot-article-single">
+            <h2 class="content-head is-center">システム</h2>
+            <div class="pure-g">
+                <div class="pure-u-2-5 custom-padding">
+                    <img src="images/robot/2016_system.jpg" width="100%">
+                </div>
+                <div class="pure-u-3-5 custom-padding">
+                    <p class="is-center">Webベースのシステム</p>
+                    <ul>
+                        <li>
+                            ブラウザで動くクライアント
+                            <p>WebSocketを使うことでブラウザからロボットを制御できます。カメラ映像もリアルタイムに配信されます。</p>
+                        </li>
+                        <li>
+                            様々なプログラミング言語, OSと接続可能
+                            <p>WebSocketでデータをやり取りすることで、ミドルウェアなどでありがちな対応言語,対応OSの制約を減らすことができます。メンバーそれぞれが、自分の好きな言語・OSで開発できます。</p>
+                        </li>
+                        <li>
+                            プログラム
+                            <p>プログラムはGithub、及びTPIP Wikiで公開予定です。（準備中）</p>
+                        </li>
+                    </ul>                    
+                </div>
+            </div>
+        </article>
+        
+        <% include layouts/footer %>  
+        
+    </div>
+
+    <% include layouts/common_script %>
+    <!-- build:js scripts/main.js -->
+    <script type="text/javascript" src="scripts/main.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/three.js -->
+    <script src="/bower_components/three.js/build/three.js"></script>
+    <script src="/bower_components/three.js/examples/js/loaders/OBJLoader.js"></script>
+    <script src="/bower_components/three.js/examples/js/Detector.js"></script>
+    <script src="/bower_components/three.js/examples/js/controls/TrackballControls.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/robotcad.js -->
+    <script src="scripts/robotcad.js"></script>
+    <!-- endbuild -->
+    <script>
+        var cads = [];               
+        
+        $('.cad-load-buttion').click( function() {
+            console.log($(this).closest("article").get(0));
+            var id = $(this).closest("article").get(0).id;
+            var n = "viewer" + id;
+            $("#"+n).height(500);
+            console.log(n);
+            cads.push(new CadViewer(n, "images/robot/2015_" + id + ".obj"));
+            this.disabled = true;
+        });
+        
+        var animate = function() {
+            requestAnimationFrame(animate);
+            cads.forEach( function(cad) {
+               cad.animate(); 
+            });
+        };
+        animate();
+    </script>
+</body>
+
+</html>
